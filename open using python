@@ -1,0 +1,69 @@
+import requests
+import pandas as pd
+import os
+from dotenv import load_dotenv
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Retrieve API key from environment variable
+API_KEY = os.getenv('OPENWEATHERMAP_API_KEY')
+if not API_KEY:
+    raise ValueError("API key not found. Please set the OPENWEATHERMAP_API_KEY environment variable.")
+
+city = 'Ongole'
+units = 'metric'
+url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units={units}"
+
+response = requests.get(url)
+data = response.json()
+
+if response.status_code == 200:
+    if 'main' in data:
+        weather_data = {
+            'City': city,
+            'Temperature (°C)': data['main'].get('temp', 'N/A'),
+            'Humidity (%)': data['main'].get('humidity', 'N/A'),
+            'Pressure (hPa)': data['main'].get('pressure', 'N/A'),
+            'Wind Speed (m/s)': data['wind'].get('speed', 'N/A'),
+            'Weather': data['weather'][0].get('description', 'N/A') if 'weather' in data else 'N/A'
+        }
+        print(weather_data)
+    else:
+        print("Error: 'main' key not found in the response.")
+        print("Response data:", data)
+else:
+    print(f"Failed to retrieve data: {response.status_code}")
+    print("Error message:", data.get("message", "No error message provided"))
+
+# Convert to DataFrame
+df = pd.DataFrame([weather_data])
+print(df)
+
+# Set Seaborn style
+sns.set_theme(style="whitegrid")
+
+# Melt the DataFrame for easier plotting
+df_melted = df.melt(id_vars='City', var_name='Parameter', value_name='Value')
+
+# Create the bar plot
+plt.figure(figsize=(8, 6))
+df_melted = df.drop(columns=['Weather']).melt(id_vars='City', var_name='Parameter', value_name='Value')
+sns.barplot(x='Parameter', y='Value', data=df_melted, hue='Parameter', palette='viridis', legend=False)
+plt.title(f'Weather Parameters for {city}')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+# Scatter plot
+plt.figure(figsize=(8, 6))
+sns.scatterplot(x='Temperature (°C)', y='Wind Speed (m/s)', data=df, hue='Weather', palette='coolwarm', s=100)
+
+plt.title(f'Temperature vs Wind Speed in {city}')
+df['Temperature (°C)'] = pd.to_numeric(df['Temperature (°C)'], errors='coerce')
+plt.tight_layout()
+plt.show()
