@@ -44,12 +44,7 @@ Requests: he Python requests library is a powerful tool for making HTTP requests
 
 Dotenv: The python-dotenv library is used to manage environment variables in Python applications. It loads key-value pairs from a .env file into the environment, allowing you to keep sensitive information separate from your code.
 
-
-
-Example Usage:
-
-A simple example would be fetching temperature data from the API and displaying it on a webpage using JavaScript and Highcharts. 
-Example Visualization using JavaScript and Highcharts:
+Steps:
 
 1. Fetch API:
 Use the fetch API to make a request to the OpenWeatherMap API, specifying the location and API key.
@@ -63,4 +58,4 @@ Use a JavaScript library like Highcharts to create charts based on the extracted
 7. Display on Webpage:
 Embed the generated charts into the webpage to visualize the weather data.
 
-In essence, OpenWeatherMap allows developers to build applications that display weather information through various interactive and visually appealing methods, leveraging its API for data retrieval and visualization libraries for chart creation. 
+In essence, OpenWeatherMap allows developers to build applications that display weather information through various interactive and visually appealing methods, leveraging its API for data retrieval and visualization libraries for chart creation. ##
