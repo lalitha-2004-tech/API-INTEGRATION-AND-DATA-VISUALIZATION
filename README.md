@@ -57,3 +57,8 @@ Use a JavaScript library like Highcharts to create charts based on the extracted
 Embed the generated charts into the webpage to visualize the weather data.
 
 In essence, OpenWeatherMap allows developers to build applications that display weather information through various interactive and visually appealing methods, leveraging its API for data retrieval and visualization libraries for chart creation. ##
+
+*OUTPUT*:
+
+![Image](https://github.com/user-attachments/assets/3bfce5a6-cb0f-41cf-a7f5-f27a45e3d959)
+
