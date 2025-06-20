@@ -14,7 +14,7 @@
 
 *DESCRIPTION*:
 
-*NAME OF THE PROJECT*: API INTEGRATION AND DATA VUISUALIZATION.
+##*NAME OF THE PROJECT*: API INTEGRATION AND DATA VUISUALIZATION.
 
 OpenWeatherMap provides weather data through an API that can be integrated into applications for various data visualizations. Developers can access current weather, forecasts, historical data, and weather alerts for any location. This data can be visualized using libraries like Highcharts to create charts and graphs, or by integrating with mapping platforms to display weather information on maps. 
        
