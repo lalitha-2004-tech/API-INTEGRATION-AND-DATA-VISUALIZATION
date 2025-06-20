@@ -1,18 +1,22 @@
 # API-INTEGRATION-AND-DATA-VISUALIZATION
 
-COMPANY: CODTECH IT SOLUTIONS
+*COMPANY*: CODTECH IT SOLUTIONS
 
-NAME: GUNJI LALITHA
+*NAME*: GUNJI LALITHA
 
-INTERN ID: CT06DL1077
+*INTERN ID*: CT06DL1077
 
-DOMAIN: PYTHON PROGRAMMING
+*DOMAIN*: PYTHON PROGRAMMING
 
-DURATION: 6 WEEKS
+*DURATION*: 6 WEEKS
 
-MENTOR: NEELA SANTHOSH
+*MENTOR*: NEELA SANTHOSH
 
-## Name of the project: API INTEGRATION AND DATA VUISUALIZATION.OpenWeatherMap provides weather data through an API that can be integrated into applications for various data visualizations. Developers can access current weather, forecasts, historical data, and weather alerts for any location. This data can be visualized using libraries like Highcharts to create charts and graphs, or by integrating with mapping platforms to display weather information on maps. 
+*DESCRIPTION*:
+
+*NAME OF THE PROJECT*: API INTEGRATION AND DATA VUISUALIZATION.
+
+OpenWeatherMap provides weather data through an API that can be integrated into applications for various data visualizations. Developers can access current weather, forecasts, historical data, and weather alerts for any location. This data can be visualized using libraries like Highcharts to create charts and graphs, or by integrating with mapping platforms to display weather information on maps. 
        
 Key Features and Integration:
 
@@ -32,6 +36,7 @@ Data Visualization Libraries:
 Libraries like Highcharts can be used to create various chart types (line, bar, pie) to represent different weather parameters. 
 
 Libraries and Tools used:
+
 Matplotlib: Matplotlib is a versatile Python library primarily used for creating static, animated, and interactive visualizations and graphs. It offers a wide range of plotting functions and customization options, making it valuable for data analysis, scientific research, and visual communication. 
 
 Seaborn: Seaborn is great for quickly creating visually appealing plots with minimal code.
